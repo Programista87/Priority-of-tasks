@@ -1,4 +1,4 @@
-function login (){
+function log (){
 
     function createAccount(username, password) {
         let account = {

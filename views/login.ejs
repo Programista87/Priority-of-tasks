@@ -1,0 +1,21 @@
+<%- include('partials/header'); -%>
+<!--<form id="loginForm">
+    <label for="username"> Username: </label>
+    <br>
+    <input type="text" id="username" name="username">
+    <br>
+    <label for="password"> Password: </label>
+    <br>
+    <input type="password" id="password" name="password">
+    <br><br>
+    <button type="submit" onclick="log(document.getElementById('username').value, document.getElementById('password').value)">Log in</button>
+</form>-->
+<form>
+    <label for="username"></label><input type="text" id="username" placeholder="Username">
+    <label for="password"></label><input type="password" id="password" placeholder="Password">
+    <button onclick="log()">Log in</button>
+    <button onclick="register()">Sing in</button>
+</form>
+
+
+<%- include('partials/footer'); -%>
