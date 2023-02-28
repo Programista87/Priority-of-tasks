@@ -4,15 +4,12 @@ function register() {
     let password = document.getElementById("password").value;
 
 
-    if (localStorage.getItem('username')) {
+    if (localStorage.getItem(username)) {
 
         alert("User in a database");
     } else {
-
         localStorage.setItem(username, password);
-
-
-        window.location.href = "/views/home";
+        localStorage.setItem("loggedIn", true);
+        window.location.href = "/views/pages/home";
     }
 }
-debugger

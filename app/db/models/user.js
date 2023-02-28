@@ -1,8 +1,3 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-mongoose.connect('mongodb://127.0.0.1:27017/prioritize');
-
-
 // @ todo
 // qustom name validation
 /*const forArr = ['sloniu', 'prioritize','loson'];
@@ -14,6 +9,8 @@ const checkName = value => {
 
 
 //model
+import mongoose from "mongoose";
+
 const userSchema = new Schema({
     username: {
         type: String,

@@ -11,6 +11,13 @@ app.use(ejsLayouts);
 app.set('layout', './layouts/main');
 //public folder
 app.use(express.static('public'));
+// users
+const users = [
+    {id:1, name: 'Sloniu', email: 'sloniu.hack@wp.pl'},
+    {id:2, name: 'Aleksandra', email: 'ola@wp.pl'},
+    {id:3, name: 'Piotr', email: 'piotr@wp.pl'},
+    {id:4, name: 'Michal', email: 'michal@wp.pl'},
+];
 
 app.get('/', (req, res) => {
     res.render('pages/home.ejs', {
@@ -37,9 +44,9 @@ app.get('/dashboard', (req, res) => {
 
 app.get('/profile/:id', (req, res) => {
     const { id } = req.params;
-    const user = user.find(x => x.id === parseInt(id));
+    const user = users.find(x => x.id === parseInt(id));
     res.render('pages/user.ejs', {
-        user: user,
+        user,
         title: `Hello ${id}`,
         url: req.url
     });
