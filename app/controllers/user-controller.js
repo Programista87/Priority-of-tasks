@@ -9,6 +9,14 @@ class UserController {
             url: req.url
         });
     }
+    showLogin  (req, res)  {
+    /*const { name } = req.params;*/
+        res.render('pages/login.ejs', {
+            title: `Prioritize Login Hello`,
+            url: req.url
+        });
+    }
 }
 
-module.exports = UserController;
+
+module.exports = new UserController();

@@ -1,16 +1,7 @@
-// @ todo
-// qustom name validation
-/*const forArr = ['sloniu', 'prioritize','loson'];
-const checkName = value => {
-    if (value === forArr.prototype.toString()) {
-        throw new Error(' Name is forbidden');
-    }
-    console.log(forArr);*/
-
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 //model
-import mongoose from "mongoose";
-
 const userSchema = new Schema({
     username: {
         type: String,
@@ -26,26 +17,10 @@ const userSchema = new Schema({
         minLength: 3
     }
 });
+
 // setter
-//userSchema.path('username').set((value) => value.toLowerCase());
+userSchema.path('username').set((value) => value.toLowerCase());
 
-const User = mongoose.model('user', userSchema);
+const User = mongoose.model('User', userSchema);
 
-async function main() {
-    /*const user = await User.find({});
-    console.log(user)*/
-
-    const user = new User({
-        username: 'Sloniu',
-        password: '123'
-    });
-    try {
-        await user.save();
-    } catch (e) {
-        console.log('Ops....');
-        for (const key in e.errors) {
-            console.log(e.errors[key].message);
-        }
-    }
-}
-main();
+module.exports = User;

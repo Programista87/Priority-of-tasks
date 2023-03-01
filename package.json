@@ -1,20 +1,23 @@
 {
   "name": "pioritizer",
   "version": "1.0.0",
-  "description": "",
-  "main": "public/src/login.js",
+  "description": "app/index.js",
+  "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon app/index.js -e js,ejs",
+    "debug": "nodemon --inspect app/index.js -e js,json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "nodemon": "^2.0.20",
-    "passport": "^0.6.0",
-    "passport-local": "^1.0.0"
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^6.9.2",
+    "nodemon": "^2.0.20"
   }
 }

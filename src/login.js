@@ -19,7 +19,7 @@ function login() {
     // Otwieramy połączenie z serwerem
     xhr.open("POST", "http://localhost/login", true);
 
-    // Ustawiamy nagłówek content-type na "application/json"
+    // Ustawiamy nagłówek content-type na "lication/json"
     xhr.setRequestHeader("Content-Type", "application/json");
 
     // Wykonujemy żądanie
